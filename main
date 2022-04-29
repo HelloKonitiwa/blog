@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
+<html lang="ja">
+
+    <body>
+        <div class="flex_test-box">
+          <div class="flex_test-item">
+            <p class="lineheight"><h1>こんにちは -2022/4/29</h1>
+            こんにちは、かねだです。<br />
+            新しくブログを書くことにしました。この時代に、HTMLべた書きしてます。<br />
+            <br />
+            ずいぶん簡素なサイトができてしまいました。すごい不便。<br/>
+            以前はちゃんとしたブログサイトで文章を書いていたんだけど、<br />
+            研究ログじゃないんだし、アーカイブをずらっと設けるのはもういいかなあと。<br />
+            <br />
+            アクセス数が伸びすぎても肩に力が入るだけなので、しばらくはこういう感じでいきます。<br />
+            <br />
+            毎日更新してるかは、毎日来てくださるとわかるかと...。<br />
+            セキュリティとかは、、、これから勉強していきます..。<br/>
+            <br />
+            じゃーね。
+            <!-- <a href="/darling_column/yesterday.html">昨日の「今日のダーリン」を読み逃した方はこちら。</a> -->
+            </p>
+          </div>
+        </div>
+    </body>
+</html>
