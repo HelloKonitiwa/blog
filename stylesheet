@@ -1,0 +1,35 @@
+.lineheight {
+    line-height: 30px;
+}
+
+.flex_test-box {
+    background-color: #fffacd;     /* 背景色指定 */
+   /* padding:  10px;             /* 余白指定 */
+    display: flex;              /* フレックスボックスにする */
+    justify-content: center; /*要素を中央ぞろえにする*/
+    flex-wrap: wrap; /*要素を下に落とす*/
+    width:100%;
+    max-width:3000px;
+    height:100%;
+    max-height: 10000px;
+    margin:0 auto;
+}
+@media screen and (max-width:767px){
+    .flex_test-box{
+        width:100%;
+        max-width:inherit;
+        padding-left:15px;
+        padding-right:15px;
+        }
+}
+ 
+.flex_test-item {
+    padding: 100px; /*横幅*/
+    color:  #000000;               /* 文字色 */
+    margin:  10px;              /* 外側の余白 */
+    border-radius:  5px;        /* 角丸指定 */
+    
+}
+.flex_test-item:nth-child(1) {
+    background-color:  #ffffff; /* 背景色指定 */
+}
