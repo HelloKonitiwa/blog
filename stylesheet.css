@@ -1,7 +1,3 @@
-.lineheight {
-    line-height: 30px;
-}
-
 .flex_test-box {
     background-color: #fffacd;     /* 背景色指定 */
    /* padding:  10px;             /* 余白指定 */
@@ -18,8 +14,8 @@
     .flex_test-box{
         width:100%;
         max-width:inherit;
-        padding-left:15px;
-        padding-right:15px;
+        padding-left:8px;
+        padding-right:8px;
         }
 }
  
