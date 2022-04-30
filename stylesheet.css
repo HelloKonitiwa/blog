@@ -1,3 +1,9 @@
+@media screen and (max-width: 480px) {
+    .hidden-mobile{
+        display : none ;
+      }
+  }
+
 .flex_test-box {
     background-color: #fffacd;     /* 背景色指定 */
    /* padding:  10px;             /* 余白指定 */
