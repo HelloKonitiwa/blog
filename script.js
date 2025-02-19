@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const articleList = document.querySelector('#article-list');
   const articleDetail = document.querySelector('#article-detail');
+  const blogTitle = document.querySelector('#blog-title'); // タイトル要素
 
   // 記事ファイルのURLとタイトルのリスト
   const articleFiles = [
@@ -47,4 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
       articleDetail.textContent = '記事の読み込みに失敗しました。';
     }
   };
+
+  // タイトルをクリックしたときに記事リストを再表示する処理
+  blogTitle.addEventListener('click', () => {
+    // 記事リストを再表示
+    articleList.style.display = 'block';
+    articleDetail.innerHTML = ''; // 記事内容を消去
+  });
 });
