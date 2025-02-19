@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const articleList = document.querySelector('#article-list');
   const articleDetail = document.querySelector('#article-detail');
-
+  const backButton = document.createElement('button');
+  
   // 記事ファイルのURLとタイトルのリスト
   const articleFiles = [
     { title: '縦書きでブログを表示する', file: 'article1.txt' },
@@ -23,6 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // 記事を読み込む関数
   const loadArticle = async (fileName) => {
     const articleUrl = `./article/${fileName}`; // 記事ファイルのパス
+
+    // タイトルリストを非表示にする
+    articleList.style.display = 'none';
+
+    // 戻るボタンを表示
+    backButton.textContent = '記事一覧に戻る';
+    backButton.id = 'back-button';
+    backButton.onclick = () => {
+      articleList.style.display = 'block'; // 記事リストを再表示
+      articleDetail.innerHTML = ''; // 記事内容をクリア
+      backButton.remove(); // 戻るボタンを削除
+    };
+    articleDetail.appendChild(backButton);
 
     try {
       const response = await fetch(articleUrl); // ファイルを読み込む
