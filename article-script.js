@@ -24,6 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
       contentElement.textContent = text;
       articleElement.appendChild(contentElement);
       articleDetail.appendChild(articleElement);
+      // 改行を処理
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('blog-content').innerHTML = text.replace(/\n/g, '<br>');
+      });
     } catch (error) {
       console.error(error);
       articleDetail.textContent = '記事の読み込みに失敗しました。';
