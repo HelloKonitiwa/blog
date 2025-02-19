@@ -75,18 +75,3 @@ footer {
   width: 100%;
   bottom: 0;
 }
-
-/* 戻るボタン */
-#back-button {
-  margin: 20px 0;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-#back-button:hover {
-  background-color: #45a049;
-}
