@@ -33,12 +33,29 @@ h2 {
   margin-bottom: 15px;
 }
 
+/* 記事一覧 */
+#article-list {
+  list-style-type: none;
+}
+
+#article-list li {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+#article-list a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#article-list a:hover {
+  text-decoration: underline;
+}
+
 /* 記事詳細 */
 #article-detail {
   margin-top: 40px;
-  height: 80vh;  /* 高さを80%に設定 */
-  overflow-y: auto;  /* 縦スクロールを追加 */
-  padding-right: 20px; /* スクロールバーのために右側に余白を追加 */
 }
 
 .vertical-text {
@@ -46,8 +63,7 @@ h2 {
   text-align: justify;
   font-size: 24px;
   line-height: 1.8;
-  word-break: break-word; /* 長い単語が切れる場合に適用 */
-  white-space: normal; /* 単語が折り返すようにする */
+  word-break: break-all;
 }
 
 /* フッター */
@@ -58,5 +74,8 @@ footer {
   color: white;
   position: fixed;
   width: 100%;
+  bottom: 0;
+}
+
   bottom: 0;
 }
