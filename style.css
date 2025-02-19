@@ -1,0 +1,77 @@
+/* 基本的なスタイル */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  font-size: 18px;
+}
+
+header {
+  text-align: center;
+  background-color: #4CAF50;
+  padding: 10px;
+  color: white;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+section {
+  margin: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* 記事一覧 */
+#article-list {
+  list-style-type: none;
+}
+
+#article-list li {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+#article-list a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#article-list a:hover {
+  text-decoration: underline;
+}
+
+/* 記事詳細 */
+#article-detail {
+  margin-top: 40px;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-align: justify;
+  font-size: 24px;
+  line-height: 1.8;
+  word-break: break-all;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  background-color: #4CAF50;
+  padding: 10px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
