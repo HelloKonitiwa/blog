@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 記事ファイルのURLとタイトルのリスト
   const articleFiles = [
-    { title: '縦書きでブログを表示する', file: 'article1.txt' },
+    { title: '2025.2.22', file: 'article1.txt' },
     { title: '縦書きのデザインについて', file: 'article2.txt' },
     { title: '縦書きの歴史と文化', file: 'article3.txt' }
   ];
