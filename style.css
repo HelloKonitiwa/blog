@@ -1,4 +1,4 @@
-/* 基本的なスタイル */
+/* 全ての要素に対して基本的なスタイルをリセット */
 * {
   margin: 0;
   padding: 0;
@@ -7,60 +7,68 @@
 }
 
 body {
-  background-color: #f4f4f9;
-  color: #333;
+  background-color: #f4f4f9;  /*背景色*/
+  color: #333;  /*文字色*/
   font-size: 18px;
 }
 
+/*ヘッダー部分*/
 header {
-  text-align: center;
-  background-color: #4CAF50;
-  padding: 10px;
-  color: white;
+  text-align: center;   /*ヘッダー内のテキストを中央ぞろえ*/
+  background-color: #4CAF50;    /*ヘッダーの背景色*/
+  padding: 10px;   /*ヘッダー内にスペース*/
+  color: white;  /*ヘッダー内の文字色*/
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 36px;  /*タイトルのフォントサイズ*/
 }
 
+/*セクション（記事一覧）*/
 section {
-  margin: 20px;
+  margin: 20px;   /*セクションの周囲にスペースを追加*/
 }
 
 h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
+  font-size: 28px;  /*記事一覧のタイトルのフォントサイズ*/
+  margin-bottom: 15px;  /*タイトル下にスペースを追加*/
+  /*以下追加*/
+  writing-mode: vertical-rl;  /*縦書き*/ 
+  right: 0; /*画面右側に配置*/
 }
 
 /* 記事一覧 */
 #article-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  list-style-type: none;  /*デフォルトのリストスタイル（丸い点）を無効化*/
+  margin: 0;  /*リスト全体のマージンを削除*/
+  padding: 0;  /*リスト全体のパディングを削除*/
   position: absolute;  /* 絶対配置して右側に表示 */
-  right: 0;
+  right: 0; /*画面右側に配置*/
   top: 100px;  /* 上からのスペース調整 */
-  height: 100%;  /* 高さを100%に */
-  display: flex;
-  flex-direction: column;  /* 縦方向に並べる */
+  height: 100%;  /* 高さを100%画面全体に */
+  display: flex;  /*フレックスボックスを使用して子要素を並べる*/
+  flex-direction: column;  /* 子要素（リスト項目）を縦方向に並べる */
   justify-content: flex-start;  /* 上に寄せる */
-  writing-mode: vertical-rl;  /* 縦書き */
+  writing-mode: vertical-rl;  /* 右から左の縦書き */
   /* text-align: center;   文字を中央揃え */
 }
 
+/*各リスト項目（記事タイトル）*/
 #article-list li {
   margin-bottom: 15px;
   font-size: 20px;
 }
 
+/*リンク（記事タイトル）のスタイル*/
 #article-list a {
-  color: #4CAF50;
-  text-decoration: none;
-  font-weight: bold;
+  color: #4CAF50; /*文字色*/
+  text-decoration: none;  /*リンク下線を削除*/
+  font-weight: bold;  /*リンクを太字に設定*/
 }
 
+/*リンクがホバーされているときのスタイル*/
 #article-list a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /*下線を表示*/
 }
 
 /* 記事詳細 */
@@ -88,4 +96,3 @@ footer {
   width: 100%;
   bottom: 0;
 }
-
