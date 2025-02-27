@@ -35,6 +35,9 @@ h2 {
 /* 記事一覧 */
 #article-list {
   list-style-type: none;
+  float: right;  /* 右側に配置 */
+  width: 250px;  /* 幅を指定して右側に収める */
+  margin-top: 50px;  /* タイトルとの間にスペース */
 }
 
 #article-list li {
@@ -57,8 +60,9 @@ h2 {
   margin-top: 40px;
 }
 
+/* 縦書きスタイル */
 .vertical-text {
-  writing-mode: vertical-rl;
+  writing-mode: vertical-rl;  /* 縦書きに変更 */
   white-space: pre-wrap; /* 空白と改行を保持 */
   text-align: justify;
   font-size: 24px;
