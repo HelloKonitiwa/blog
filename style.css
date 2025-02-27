@@ -34,6 +34,7 @@ h2 {
   margin-bottom: 15px;  /*タイトル下にスペースを追加*/
   /*以下追加*/
   writing-mode: vertical-rl;  /*縦書き*/ 
+  position: absolute;  /* 絶対配置して右側に表示 */
   right: 0; /*画面右側に配置*/
 }
 
