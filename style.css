@@ -35,9 +35,17 @@ h2 {
 /* 記事一覧 */
 #article-list {
   list-style-type: none;
-  float: right;  /* 右側に配置 */
-  width: 250px;  /* 幅を指定して右側に収める */
-  margin-top: 50px;  /* タイトルとの間にスペース */
+  margin: 0;
+  padding: 0;
+  position: absolute;  /* 絶対配置して右側に表示 */
+  right: 0;
+  top: 100px;  /* 上からのスペース調整 */
+  height: 100%;  /* 高さを100%に */
+  display: flex;
+  flex-direction: column;  /* 縦方向に並べる */
+  justify-content: flex-start;  /* 上に寄せる */
+  writing-mode: vertical-rl;  /* 縦書き */
+  text-align: center;  /* 文字を中央揃え */
 }
 
 #article-list li {
@@ -60,16 +68,6 @@ h2 {
   margin-top: 40px;
 }
 
-/* 縦書きスタイル */
-.vertical-text {
-  writing-mode: vertical-rl;  /* 縦書きに変更 */
-  white-space: pre-wrap; /* 空白と改行を保持 */
-  text-align: justify;
-  font-size: 24px;
-  line-height: 1.8;
-  word-break: break-all;
-}
-
 /* フッター */
 footer {
   text-align: center;
@@ -80,3 +78,4 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
