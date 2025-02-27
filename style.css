@@ -45,7 +45,7 @@ h2 {
   flex-direction: column;  /* 縦方向に並べる */
   justify-content: flex-start;  /* 上に寄せる */
   writing-mode: vertical-rl;  /* 縦書き */
-  text-align: center;  /* 文字を中央揃え */
+  /* text-align: center;   文字を中央揃え */
 }
 
 #article-list li {
