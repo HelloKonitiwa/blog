@@ -35,7 +35,7 @@ h2 {
   /*以下追加*/
   writing-mode: vertical-rl;  /*縦書き*/ 
   position: absolute;  /* 絶対配置して右側に表示 */
-  right: 0; /*画面右側に配置*/
+  right: 50px; /*画面右側に配置*/
 }
 
 /* 記事一覧 */
@@ -44,8 +44,8 @@ h2 {
   margin: 0;  /*リスト全体のマージンを削除*/
   padding: 0;  /*リスト全体のパディングを削除*/
   position: absolute;  /* 絶対配置して右側に表示 */
-  right: 40px; /*画面右側に配置*/
-  top: 100px;  /* 上からのスペース調整 */
+  right: 120px; /*画面右側に配置*/
+  top: 120px;  /* 上からのスペース調整 */
   height: 100%;  /* 高さを100%画面全体に */
   display: flex;  /*フレックスボックスを使用して子要素を並べる*/
   flex-direction: column;  /* 子要素（リスト項目）を縦方向に並べる */
@@ -73,8 +73,27 @@ h2 {
 }
 
 /* 記事詳細 */
+/* 記事詳細のスタイル */
 #article-detail {
-  margin-top: 40px;
+  width: calc(100vw - 200px); /* 左右100pxの余白を確保 */
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 記事ブロック */
+.article-block {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px dashed #333; /* 破線で区切る */
+  background-color: white;
+  font-size: 18px;
+  line-height: 2em;
+  writing-mode: vertical-rl; /* 縦書き */
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* 縦書きスタイル */
@@ -82,6 +101,8 @@ h2 {
   writing-mode: vertical-rl;  /* 縦書きに変更 */
   white-space: pre-wrap; /* 空白と改行を保持 */
   text-align: justify;
+  position: absolute;  /* 絶対配置して右側に表示 */
+  right: 50px; /*画面右側に配置*/
   font-size: 24px;
   line-height: 1.8;
   word-break: break-all;
