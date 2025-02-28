@@ -5,10 +5,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   const articleFile = params.get('article');
 
-  // 1行あたりの最大文字数
+   // 1行あたりの最大文字数
   const maxCharsPerLine = 25;
-  // 1ブロックあたりの最大行数
-  const maxLinesPerBlock = 35;
+
+  // デバイスの画面幅に応じて、1ブロックの最大行数を設定する関数
+  function getMaxLinesPerBlock() {
+    if (window.matchMedia('(max-width: 600px)').matches) {
+      return 10; // スマホ（600px以下）の場合
+    } else if (window.matchMedia('(max-width: 1024px)').matches) {
+      return 25; // タブレット（601px～1024px）の場合
+    } else {
+      return 35; // PC（1025px以上）の場合
+    }
+  }
+
+  // 1ブロックあたりの最大行数を動的に設定
+  let maxLinesPerBlock = getMaxLinesPerBlock();
+
+  // 画面サイズ変更時に `maxLinesPerBlock` を再計算
+  window.addEventListener('resize', () => {
+    maxLinesPerBlock = getMaxLinesPerBlock();
+  });
+
 
   // 記事を読み込む関数
   const loadArticle = async (fileName) => {
