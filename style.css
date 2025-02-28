@@ -31,7 +31,6 @@ section {
 
 h2 {
   font-size: 28px;  /*記事一覧のタイトルのフォントサイズ*/
-  margin-bottom: 15px;  /*タイトル下にスペースを追加*/
   /*以下追加*/
   writing-mode: vertical-rl;  /*縦書き*/ 
   position: absolute;  /* 絶対配置して右側に表示 */
@@ -72,10 +71,12 @@ h2 {
   text-decoration: underline; /*下線を表示*/
 }
 
-/* 記事詳細 */
 /* 記事詳細のスタイル */
 #article-detail {
-  width: calc(100vw - 200px); /* 左右100pxの余白を確保 */
+  /*スマホでは余白が広すぎるため，調整*/
+  width: 90%; /*全体の80%を占めることとする*/
+  /*max-width: 2000px;  最大幅を設定*/
+  /*width: calc(100vw - 200px); /* スマホを考慮する前のコード。左右100pxの余白を確保 */
   margin: 0 auto;
   padding: 20px 0;
   display: flex;
@@ -118,3 +119,62 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
+/* レスポンシブデザイン？ */
+/* PC時 */
+@media screen and (min-width: 1024px) {
+  /*ウィンドウ幅が1024px以上の場合に適用*/
+}
+
+/* タブレット用 */
+/*ウィンドウ幅が最大1024pxまでの場合に適用*/
+@media screen and (max-width: 1024px) {
+  #article-detail {
+    width: 90%;
+  }
+  
+  .article-block {
+    font-size: 18px;
+    line-height: 2;
+  }
+}
+
+
+/* スマホ用 */
+/*ウィンドウ幅が最大600pxまでの場合に適用*/
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  } 
+
+  h2 {
+    font-size: 24px;
+    text-align: left;
+    writing-mode: horizontal-tb;  /*スマホでは横書き*/
+    position: static; /* `absolute` を解除し、通常のフローに戻す */
+    margin-left: 10px; /* 左に少し余白を入れる */
+  }
+
+  #article-list {
+    flex-direction: column;
+    writing-mode: horizontal-tb;  /*スマホでは横書き*/
+    position: static; /* `absolute` を解除し、通常のフローに戻す */
+    text-align: left;  /* 左寄せ */
+    margin-left: 20px; /* 左に少し余白を入れる */
+    margin-top: 15px;  /*上に少し余白を入れる*/
+  }
+
+  #article-detail {
+    width: 95%; /*スマホでは幅を広げる*/
+    padding: 10px;
+  }
+  .article-block {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+/* ここまで追加 */
