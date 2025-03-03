@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>当ブログ制作メモ</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1 id="blog-title">小野のブログ</h1>
+      </header>
+
+    <section id="memo-detail">
+        <p style="text-align: center;">ブログをご覧くださり，ありがとうございます。</p>
+        <p style="text-align: center;">このページは，本ブログの改善点や修正が必要な箇所をメモしておく場所です。</p>
+        <p style="text-align: center;">記事を公開しながらぼちぼちプログラムを直しているので，見にくい部分もあるかと思います。</p>
+        <p style="text-align: center;">お気づきの点があれば，よければ下記フォームから教えてくださると嬉しいです。</p><br>
+
+        <p style="text-align: center;">＜トップページ＞</h2>
+        <ul class="a">
+            <li>記事一覧が寂しいので画像やタイトルを使用し，レイアウトを変更する。
+                <li>ハンバーガーメニューをつくりたい。
+         </ul>
+         <br>
+         <p style="text-align: center;">＜記事詳細ページ＞</p>
+         <ul class="a">
+            <li>記事に英語が入ると文字数のカウントがおかしくなり，改行が早くなる。
+            <li>句読点が文頭にくる場合がある。
+            <li>PCのサブモニターなど，想定より大きな画面で表示したときに余白が大きくなる（記事ブロックの遷移が早い）。
+            <li>画像の挿入をできるようにしたい。
+            <li>リンクをつけれるようにしたい。
+            <li>markdownで記事を書きたい。
+         </ul><br><br>
+         
+         <form action="https://formspree.io/f/xanqrago" method="POST">
+            <p style="text-align: center;">＜よければご意見をお聞かせください。＞</p>
+            <label for="name">名前:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">メッセージ:</label>
+            <textarea id="message" name="message" required></textarea><br>
+            <input type="submit" value="送信">
+          </form>
+          
+          </style>
+    <p style="text-align:center">&copy; 2025 小野のブログ</p>
+</footer> 
+
+
+  <script src="article-script.js"></script>
+</body>
+</html>
