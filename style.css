@@ -87,7 +87,8 @@ h2 {
 /* 記事ブロック */
 .article-block {
   width: 100%;
-  padding: 10px;
+  padding: 50px;
+  /*border-top: 2px dashed #333;  /* 破線で区切る */
   border-bottom: 2px dashed #333; /* 破線で区切る */
   background-color: white;
   font-size: 18px;
@@ -108,6 +109,84 @@ h2 {
   line-height: 1.8;
   word-break: break-all;
 }
+
+/*メモ画面*/
+#memo-detail {
+  /*スマホでは余白が広すぎるため，調整*/
+  width: 90%; /*全体の80%を占めることとする*/
+  /*max-width: 2000px;  最大幅を設定*/
+  /*width: calc(100vw - 200px); /* スマホを考慮する前のコード。左右100pxの余白を確保 */
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  font-size: 18px;
+ 
+}
+/*メモ画面リスト*/
+  ul.a { margin: 10px 20px; }
+  ul.a { font-size: 18px; }
+
+/*フォーム*/
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin: 5px 0 3px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+
+  input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  .form-footer {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+  }
+
+  .form-footer a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+
+  .form-footer a:hover {
+    text-decoration: underline;
+  }
 
 /* フッター */
 footer {
@@ -171,10 +250,12 @@ footer {
   .article-block {
     font-size: 18px;
     line-height: 1.8;
+    padding: 20px;
   }
 
   p {
     font-size: 16px;
   }
+  ul.a { font-size: 16px; }
 }
 /* ここまで追加 */
