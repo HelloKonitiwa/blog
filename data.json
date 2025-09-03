@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "2025年8月31日の日記" ,
+    "image": "articles/images/noimage.jpg",
+    "date": "2025-08-30",
+    "tags": ["日記"]
+  },
+  {
+    "id": 2,
+    "title": "2025年9月1日の日記",
+    "image": "articles/images/noimage.jpg",
+     "date": "2025-09-01",
+      "tags": []
+  },
+  {
+    "id": 3,
+    "title": "2025年9月2日の日記",
+    "image": "articles/images/noimage.jpg",
+     "date": "2025-09-02",
+      "tags": []
+  }
+]

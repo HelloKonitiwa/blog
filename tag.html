@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タグ別記事一覧</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- スマホのみヘッダーを表示-->
+  <header>
+    <div class="logo">兼田のブログ</div>
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="archive.html">記事一覧</a>
+      <a href="">本サイトについて</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <!-- PCのみサイドバーを表示 -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="articles/images/profile.jpg">
+        <h2>兼田</h2>
+        <p>心理学科の大学生です。</p>
+      </div>
+    </aside>
+
+    <!-- PCのみメインコンテンツを表示 -->
+    <main class="main-content">
+      <header class="sub-header">
+        <nav>
+          <a href="index.html">ホーム</a>
+          <a href="archive.html">記事一覧</a>
+          <a href="">本サイトについて</a>
+        </nav>
+      </header>
+
+    <h1 id="tag-title">タグ: </h1> <br>
+    <div id="tag-article-list" class="container"></div>
+  </main>
+
+  <footer>
+    &copy; 2025 兼田のブログ. All rights reserved.
+  </footer>
+
+  <script src="tag.js"></script>
+</body>
+</html>
+

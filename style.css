@@ -1,0 +1,389 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: white;
+  color: #333;
+  /*以降archive.htmlのために作成*/
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00c2a0;
+}
+
+header nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* サイドバーとメインを横並びにする */
+.layout {
+  display: flex;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* サイドバー */
+.sidebar {
+  width: 300px;
+  background-color: #C0CDDC;
+  padding: 1.5rem;
+}
+
+/*.sidebar .profile {
+  text-align: center;
+}*/
+
+.sidebar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+/* メインコンテンツ */
+.main-content {
+  flex: 1;
+  padding: 1rem 2rem;
+}
+
+/* PCのみ記事一覧の直上に置くサブヘッダー */
+.sub-header {
+  background: #fff;
+  border-bottom: 1.5px solid #ddd;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.sub-header nav a {
+  margin-right: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/*記事一覧*/
+.container {
+  max-width: 1000px;
+  /* 横幅を広めに */
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  display: grid;
+  /*gridを使って並べる*/
+  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* カード間の余白 */
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.card .date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.8rem;
+}
+
+.card p {
+  color: #000;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #999;
+  position: fixed;
+  /*以下3行footerを下部に固定*/
+  bottom: 0;
+  width: 100%;
+}
+
+/*引用*/
+.card blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1em;
+  margin: 1em 0;
+  color: #444;
+  background-color: #f9f9f9;
+  font-style: italic;
+}
+
+.card h1,
+.card h2,
+.card h3 {
+  margin-top: 1.2em;
+}
+
+/*以降archive.htmlのために作成*/
+.year {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.month {
+  margin-left: 1.5rem;
+  cursor: pointer;
+  color: black;
+  /* ← 色を黒に */
+  /*text-decoration: underline;    ← 下線を常に表示 */
+}
+
+.month:hover {
+  text-decoration: underline;
+}
+
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.archive_container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/*記事画面　文字色はcard pのところだった*/
+.article-content {
+  color: #000;
+  /* 文字色：黒 */
+  font-size: 18px;
+  /* 文字サイズ */
+  line-height: 2;
+  /* 行間を広めに */
+  max-width: 860px;
+  /* 横幅制限 */
+  margin: 40px auto;
+  /* 中央揃え */
+  padding: 0 20px;
+  /* スマホ対応余白 */
+  word-wrap: break-word;
+  /* 改行調整 */
+}
+
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 24px auto;
+  /* 中央寄せ & 上下に余白 */
+}
+
+/*タグ*/
+.tags {
+  margin-top: 1.5em;
+  font-size: 0.95em;
+}
+
+.tag {
+  display: inline-block;
+  margin-right: 0.6em;
+  padding: 0.3em 0.6em;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.tag:hover {
+  background-color: #dcdcdc;
+}
+
+/* タグ別アーカイブの見出しとタグ一覧のスタイル */
+#tag-list {
+  margin-top: 2em;
+}
+
+.tag {
+  padding: 8px 12px;
+  margin: 6px 0;
+  display: inline-block;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tag:hover {
+  background-color: #d0e8ff;
+}
+
+/*tag.html*/
+.article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*警告文*/
+.admonition {
+  border-left: 5px solid #f39c12;
+  background-color: #fff3cd;
+  padding: 1em;
+  margin: 1.5em 0;
+  border-radius: 5px;
+  color: #856404;
+}
+
+.admonition strong {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.admonition.warning {
+  border-color: #e74c3c;
+  background-color: #fdecea;
+  color: #a94442;
+}
+
+
+
+/* レスポンシブ対応 */
+/* ---- PC/スマホ表示切替用 ---- */
+.pc-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* スマホ用: サイドバー，サブヘッダーを非表示*/
+@media screen and (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    padding: 0 1rem;
+  }
+
+  .sub-header {
+    display: none;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+
+
+  .logo {
+    font-size: 1.5em;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .month,
+  .year {
+    font-size: 1em;
+  }
+}
+
+/* PCではヘッダーを非表示, サブヘッダーはpcのみ表示 */
+@media screen and (min-width: 769px) {
+  header {
+    display: none;
+  }
+
+/* サイドバーをビューポート高に、上端に貼り付け */
+  .sidebar {
+    position: sticky;    /* スクロールしても左に張り付く */
+    top: 0;              /* 画面上端から開始（PCではヘッダー非表示なら 0 でOK） */
+    height: 100vh;       /* 画面の高さちょうど */
+    overflow: auto;      /* 中身が長いときサイドバー内だけスクロール */
+  }
+
+  /* 固定フッターに隠れないよう、メインに下パディングを付与
+     フッターの実寸に合わせて値を調整*/
+  .main-content {
+    padding-bottom: 80px;
+  }
+
+  .sub-header {
+    display: block;
+  }
+}
